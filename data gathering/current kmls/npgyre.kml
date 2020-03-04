@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>North Pacific Gyre</name>
+    <description>The North Pacific Gyre or North Pacific Subtropical Gyre, located in the northern Pacific Ocean, is one of the five major oceanic gyres. This gyre covers most of the northern Pacific Ocean.</description>
+    <Style id="yellowLineGreenPoly">
+      <LineStyle>
+        <color>7f00ffff</color>
+        <width>4</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>7f00ff00</color>
+      </PolyStyle>
+    </Style>
+    <Placemark>
+      <name>North Pacific Gyre</name>
+      <description>The North Pacific Gyre or North Pacific Subtropical Gyre, located in the northern Pacific Ocean, is one of the five major oceanic gyres. This gyre covers most of the northern Pacific Ocean.</description>
+      <styleUrl>#yellowLineGreenPoly</styleUrl>
+      <LineString>
+        <altitudeMode>absolute</altitudeMode>
+        <coordinates>
+          141.05,-0.80,100000
+          143.41,-0.24,100000
+          144.26,2.04,100000
+          149.32,2.59,100000
+          150.97,5.70,100000
+          154.33,5.83,100000
+          159.33,3.42,100000
+          162.59,5.59,100000
+          167.97,3.96,100000
+          171.16,5.28,100000
+          174.93,5.07,100000
+          177.58,6.50,100000
+          178.78,5.82,100000
+          174.43,8.14,100000
+          -168.43,6.40,100000
+          -161.57,7.89,100000
+          -157.05,8.29,100000
+          -153.70,7.32,100000
+          -146.75,7.89,100000
+          -139.16,7.53,100000
+          -132.93,7.88,100000
+          -127.31,8.40,100000
+          -122.64,6.52,100000
+          -115.49,4.78,100000
+          -108.92,6.27,100000
+          -103.13,5.92,100000
+          -99.48,6.68,100000
+          -93.83,6.54,100000
+          -88.29,6.67,100000
+          -87.48,8.47,100000
+          -90.21,10.30,100000
+        </coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+  		<name>Untitled Polygon</name>
+  		<open>1</open>
+  		<styleUrl>#msn_ylw-pushpin</styleUrl>
+  		<Polygon>
+  			<tessellate>1</tessellate>
+        <altitudeMode>absolute</altitudeMode>
+  			<outerBoundaryIs>
+  				<LinearRing>
+  					<coordinates>
+  						146.3404932886426,1.396819575604069,100000 148.2337032244783,2.511534339547493,100000 145.9883427909399,2.947410412959621,100000 146.3404932886426,1.396819575604069,100000
+  					</coordinates>
+  				</LinearRing>
+  			</outerBoundaryIs>
+  		</Polygon>
+  	</Placemark>
+    <Placemark>
+  		<name>Untitled Polygon</name>
+  		<open>1</open>
+  		<styleUrl>#msn_ylw-pushpin</styleUrl>
+  		<Polygon>
+  			<tessellate>1</tessellate>
+        <altitudeMode>absolute</altitudeMode>
+  			<outerBoundaryIs>
+  				<LinearRing>
+  					<coordinates>
+  						163.9369221747416,4.247674492899891,100000 166.9438671941537,4.314676961348894,100000 164.5711577319979,6.078799769886697,100000 163.9369221747416,4.247674492899891,100000
+  					</coordinates>
+  				</LinearRing>
+  			</outerBoundaryIs>
+  		</Polygon>
+  	</Placemark>
+    <Placemark>
+  		<name>Untitled Polygon</name>
+  		<open>1</open>
+  		<styleUrl>#msn_ylw-pushpin</styleUrl>
+  		<Polygon>
+  			<tessellate>1</tessellate>
+        <altitudeMode>absolute</altitudeMode>
+  			<outerBoundaryIs>
+  				<LinearRing>
+  					<coordinates>
+  						207.3890533169624,6.128564127609424,100000 211.0791878359991,7.643752082066944,100000 207.5913763874615,8.580561933423823,100000 207.3890533169624,6.128564127609424,100000
+  					</coordinates>
+  				</LinearRing>
+  			</outerBoundaryIs>
+  		</Polygon>
+  	</Placemark>
+    <Placemark>
+  		<name>Untitled Polygon</name>
+  		<open>1</open>
+  		<styleUrl>#msn_ylw-pushpin</styleUrl>
+  		<Polygon>
+  			<tessellate>1</tessellate>
+        <altitudeMode>absolute</altitudeMode>
+  			<outerBoundaryIs>
+  				<LinearRing>
+  					<coordinates>
+  						236.105172402833,5.53451699004661,100000 241.27014839046,5.719041074098997,100000 237.5465865248004,8.316079619953774,100000 236.105172402833,5.53451699004661,100000
+  					</coordinates>
+  				</LinearRing>
+  			</outerBoundaryIs>
+  		</Polygon>
+  	</Placemark>
+  </Document>
+</kml>

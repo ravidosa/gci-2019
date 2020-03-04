@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Labrador Sea.kml</name>
+	<LineStyle>
+		<color>033d24fd</color>
+	</LineStyle><PolyStyle>
+		<color>033d24fd</color>
+	</PolyStyle>
+	<StyleMap id="m_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin_hl">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ffff0000</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>ffff0000</color>
+		</PolyStyle>
+	</Style>
+	<Style id="s_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ffff0000</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>ffff0000</color>
+		</PolyStyle>
+	</Style>
+	<Placemark>
+		<name>Labrador Sea</name>
+		<description>The Labrador Sea is an arm of the North Atlantic Ocean between the Labrador Peninsula and Greenland. The sea is flanked by continental shelves to the southwest, northwest, and northeast. It connects to the north with Baffin Bay through the Davis Strait. It has been described as a marginal sea of the Atlantic.</description>
+		<styleUrl>#m_ylw-pushpin</styleUrl>
+		<Polygon>
+			<tessellate>1</tessellate>
+			<gx:altitudeMode>clampToSeaFloor</gx:altitudeMode>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						-62.50964660141309,58.45535803706574,0 -61.79313847699741,57.87821554604997,0 -61.02791535293195,56.8810737921088,0 -61.01946594752864,56.33396395001003,0 -59.91056134077537,55.41147735787319,0 -58.98230468809375,55.15097696506533,0 -58.46639299390132,54.88239621569547,0 -57.84819365405838,54.94613802581465,0 -57.70387921767434,54.67404958839363,0 -57.01965357580503,54.52434398489959,0 -57.67064225470437,54.23469980353789,0 -56.92769420853024,53.83262252217785,0 -55.91961462168863,53.506449619669,0 -55.73627540430179,52.53837841940975,0 -55.6777982075259,52.20576945879585,0 -55.38062027883841,51.54071595656419,0 -55.76668970255259,51.27632661445216,0 -55.74726946526888,51.05433128530341,0 -56.72203959744608,49.80348899180873,0 -56.11684446650683,50.14769577839919,0 -55.73131186128177,49.98905806126842,0 -55.37054434248664,49.93109710827653,0 -55.79309915689048,49.70494913193012,0 -55.41291955565296,49.5630121696011,0 -54.94821914104847,49.60222887031967,0 -54.47669804895887,49.74036166916887,0 -54.11652440130771,49.7295490583211,0 -54.01097503157429,49.42456584563057,0 -53.43581323712097,49.27092516768235,0 -53.69376478993853,48.92940925705307,0 -53.52595151780069,48.52337142224391,0 -53.51470944450802,48.65622009082735,0 -53.3419640040805,48.61644697148359,0 -53.15755238281577,48.70897368959002,0 -52.88779129985712,48.11534967110238,0 -53.1194096592953,47.49313857820196,0 -52.84236823769738,47.81407313546747,0 -52.561582417982,47.65220055495109,0 -52.77234266257536,46.68518891658184,0 -42.95680739643349,59.82776860940973,0 -64.68212951281117,60.57563668225157,0 -62.50964660141309,58.45535803706574,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+</Document>
+</kml>

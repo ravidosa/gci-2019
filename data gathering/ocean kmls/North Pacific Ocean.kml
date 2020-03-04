@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>North Pacific Ocean.kml</name>
+	<open>1</open>
+	<LineStyle>
+		<color>c2711efd</color>
+	</LineStyle><PolyStyle>
+		<color>c2711efd</color>
+	</PolyStyle>
+	<Style id="sn_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<BalloonStyle>
+		</BalloonStyle>
+		<LineStyle>
+			<color>ff06ff21</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>ff06ff21</color>
+		</PolyStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<BalloonStyle>
+		</BalloonStyle>
+		<LineStyle>
+			<color>ff06ff21</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>ff06ff21</color>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Placemark>
+		<name>North Pacific Ocean</name>
+		<description>The Pacific Ocean is the largest and deepest of Earth&apos;s oceanic divisions. It extends from the Arctic Ocean in the north to the Southern Ocean (or, depending on definition, to Antarctica) in the south and is bounded by the continents of Asia and Australia in the west and the Americas in the east.</description>
+		<styleUrl>#msn_ylw-pushpin</styleUrl>
+		<Polygon>
+			<tessellate>1</tessellate>
+			<gx:altitudeMode>clampToSeaFloor</gx:altitudeMode>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						-79.27855790499733,8.906293053624397,0 -80.16618979556655,7.918794268327662,0 -80.10119529701865,6.895563879232311,0 -83.343879386648,8.086468751151859,0 -85.21708908168982,9.710006693185544,0 -86.06709200315541,10.99506008575432,0 -87.74089670972815,13.15380448765323,0 -91.64135628211471,13.82859573191419,0 -92.84036492086084,15.16209255335846,0 -94.1681412804099,15.86669558434473,0 -98.58946341438867,15.40401583323424,0 -105.9204977963954,19.72439139150883,0 -108.8463921626359,21.77018818502672,0 -112.5046653623251,24.74364108248925,0 -112.5229657915731,26.11444040411728,0 -115.4174586467926,27.67048932795353,0 -114.2164188617478,28.03577031957905,0 -116.5144064381022,31.87803282122688,0 -118.4921070100089,33.71687126787871,0 -120.6356609929061,34.57495028560727,0 -124.9558889607068,40.21975181639089,0 -124.3945261598358,45.49822237850367,0 -124.7913808642093,48.2874665648648,0 -128.6325545795013,50.2811093323216,0 -131.9543777673778,51.43514434362252,0 -132.7168988992011,53.73837073684059,0 -137.1949670916624,57.86608618547182,0 -204.0115297483069,50.77744512492357,0 -214.1080067369246,43.65852363706227,0 -218.1026699774128,41.91498990942939,0 -217.1048076329758,39.28359269015031,0 -218.5769984728348,37.80645316706157,0 -219.2020713409329,35.46368511667281,0 -219.8659463349187,19.8261990513651,0 -215.706551042628,13.5458473252157,0 -231.109917306469,2.361114231561075,0 -231.3201217185213,0.3479738328803088,0 -225.6111523453563,-0.6662564617789278,0 -163.5291065202384,7.774785481247245,0 -131.7820614012512,6.689591626009935,0 -92.74698359193788,-0.3396070006693054,0 -92.08761197940899,1.333776572439566,0 -90.37963040863529,0.6398393687009608,0 -80.10096333195567,-0.3962781766265382,0 -77.60914386687946,4.577798258118576,0 -77.86468989071534,6.664067435012362,0 -78.57939700860513,8.174209777255886,0 -79.27855790499733,8.906293053624397,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+</Document>
+</kml>

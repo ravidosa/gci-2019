@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>South Pacific Ocean.kml</name>
+	<Style id="sh_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<BalloonStyle>
+		</BalloonStyle>
+		<LineStyle>
+			<color>ff800000</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>ff800000</color>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin">
+		<BalloonStyle>
+		</BalloonStyle>
+		<LineStyle>
+			<color>ff800000</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>ff800000</color>
+		</PolyStyle>
+	</Style>
+	<Placemark>
+		<name>South Pacific Ocean</name>
+		<description>The Pacific Ocean is the largest and deepest of Earth&apos;s oceanic divisions. It extends from the Arctic Ocean in the north to the Southern Ocean (or, depending on definition, to Antarctica) in the south and is bounded by the continents of Asia and Australia in the west and the Americas in the east.</description>
+		<styleUrl>#msn_ylw-pushpin</styleUrl>
+		<Polygon>
+			<tessellate>1</tessellate>
+			<gx:altitudeMode>clampToSeaFloor</gx:altitudeMode>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						-80.24037728592148,-0.08581279672721287,0 -90.3746676960115,0.3013279013038369,0 -91.68774756408476,0.9096932746988396,0 -92.25160329325239,-0.2564793829499475,0 -131.7461713032667,6.474289745352489,0 -163.7445942580299,7.498701861188317,0 -209.6361368114372,0.9159652884251396,0 -226.329772806245,-0.8689694537447845,0 -220.2394779951207,-1.71749162939328,0 -209.5552619843714,-1.514534350330108,0 -206.2713928285594,-3.859401367380122,0 -202.8544560372017,-5.985761239213904,0 -199.6968050364935,-8.075952197849118,0 -194.0968431877394,-9.189870071981629,0 -193.2434590277765,-15.00358845944864,0 -189.619301782542,-18.51605852127505,0 -191.151834199204,-24.8657097836465,0 -188.572676611946,-27.72401950323499,0 -186.7355946524646,-34.60428775666575,0 -183.080358938675,-37.78329668883615,0 -181.3485341241565,-37.57889373588169,0 -180.947591064239,-39.14744042884848,0 -183.2767224137244,-41.4882709164547,0 -185.3751352688442,-41.70200822753593,0 -186.5789682157952,-43.91547026028686,0 -190.2095177168084,-46.88891319488101,0 -212.5297925964359,-43.15979336831199,0 -229.4948342578813,-60.59507277041818,0 -193.8577106813613,-63.2015518348759,0 -159.7578661883765,-65.72537645335755,0 -111.3072648023424,-61.36642516407175,0 -71.62860960982994,-54.71559303968281,0 -73.85107231593783,-52.2137800795029,0 -75.91381601778819,-49.2405623261558,0 -73.65292865733187,-42.09303129928685,0 -73.83096179605447,-37.57982838170111,0 -71.99896347200708,-33.56032074807144,0 -70.65057476952865,-18.40953100367418,0 -73.72597507264835,-16.16411432572135,0 -76.52908050448735,-14.47410186955159,0 -79.53728765354218,-7.210637679635844,0 -82.19507440068242,-5.927668348978999,0 -80.30952138700313,-2.957060443086548,0 -80.24037728592148,-0.08581279672721287,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+</Document>
+</kml>

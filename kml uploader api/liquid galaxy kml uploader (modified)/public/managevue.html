@@ -1,0 +1,161 @@
+<div id="app">
+  <body>
+      <main>
+        <div class="navbar">
+          <a href="/manage.html">Manage</a>
+          <a href="/build.html">Build</a>
+          <a href="/view.html">View</a>
+        </div>
+        <div class="main">
+          <h1>KML Uploader</h1>
+          <div id="bigdiv">
+            <input type="text" id="search" onkeyup="search()" placeholder="Search for kmls..">
+            <ul id="kmls">
+              <li>
+                <button class="collapsible" id="crud" onclick="toggle()">+ Add KML</button>
+                <div class="content">
+                  <label>Name:</label>
+                  <input type="text" id="name" style="margin:8px"><br>
+                  <button id="namesub" class="small">Create KML</button>
+                </div>
+              </li>
+              <kml
+                v-for="item in kmlList"
+                v-bind:kml="item"
+                v-bind:key="item.id"
+                v-bind:id="item.id">
+              </kml>
+              <ul>
+          </div>
+        </div>
+      </main>
+  </body>
+</div>
+<head>
+    <title>KML Uploader API</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="js/managevue.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script>
+      function search() {
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById('search');
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("kmls");
+        li = ul.getElementsByTagName('li');
+
+        for (i = 1; i < li.length; i++) {
+          a = li[i].getElementsByTagName("button")[0];
+          txtValue = a.textContent || a.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+          } else {
+            li[i].style.display = "none";
+          }
+        }
+      }
+    </script>
+    <script>
+      $(document).ready(function() {
+        function sleep(ms) {
+          return new Promise(resolve => setTimeout(resolve, ms));
+        }
+        document.getElementById('crud').addEventListener("click", function(e) {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        });
+        document.getElementById('namesub').addEventListener("click", function(e) {
+          var url = "http://localhost:5430/kml/manage/new?name=" + $('#name').val();
+          fetch(url, {
+            method: 'POST',
+          }).then(function(response) {
+              if(response.ok) {
+                response.json().then(function(data) {
+                  console.log(data);
+                  location.reload();
+                });
+              } else {
+                  console.log("response failed");
+              }
+          });
+        });
+        sleep(1000).then(() => {
+          var collapsibles, delbuttons, setbuttons, current, i;
+          fetch('http://localhost:5430/kml/manage/current', {
+            method: 'GET',
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(self.formPayload)
+          }).then(res => res.json()).then(json => {
+            current = json.current.id;
+            collapsibles = document.querySelectorAll('.collapsible');
+            for (i = 0; i < collapsibles.length; i++) {
+              collapsibles[i].addEventListener("click", function(e) {
+                //console.log(e);
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                  content.style.display = "none";
+                } else {
+                  content.style.display = "block";
+                }
+              });
+              if (i == current + 1) {
+                var att8 = document.createAttribute("class");
+                att8.value = "collapsible current";
+                collapsibles[i].setAttributeNode(att8);
+              }
+            }
+          });
+          delbuttons = document.querySelectorAll('.del');
+          for (i = 0; i < delbuttons.length; i++) {
+            delbuttons[i].addEventListener("click", function(e) {
+              var url = "http://localhost:5430/kml/manage/" + e.target.parentElement.parentElement.id;
+              fetch(url, {
+                method: 'DELETE',
+                headers: {
+                  'Content-Type': 'application/json'
+                },
+              }).then(function(response) {
+                  if(response.ok) {
+                    response.json().then(function(data) {
+                      console.log(data);
+                      location.reload();
+                    });
+                  } else {
+                      console.log("response failed");
+                  }
+              });
+            });
+          }
+          setbuttons = document.querySelectorAll('.set');
+          for (i = 0; i < setbuttons.length; i++) {
+            setbuttons[i].addEventListener("click", function(e) {
+              var url = "http://localhost:5430/kml/manage/" + e.target.parentElement.parentElement.id;
+              fetch(url, {
+                method: 'PUT',
+              }).then(function(response) {
+                  if(response.ok) {
+                    response.json().then(function(data) {
+                      console.log(data);
+                      location.reload();
+                    });
+                  } else {
+                      console.log("response failed");
+                  }
+              });
+            });
+          }
+
+        })
+      });
+    </script>
+</head>

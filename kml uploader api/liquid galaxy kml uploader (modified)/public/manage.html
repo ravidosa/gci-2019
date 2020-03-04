@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>KML Uploader API</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/manage.js"></script>
+    <script>
+      function search() {
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById('search');
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("kmls");
+        li = ul.getElementsByTagName('li');
+
+        for (i = 1; i < li.length; i++) {
+          a = li[i].getElementsByTagName("button")[0];
+          txtValue = a.textContent || a.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+          } else {
+            li[i].style.display = "none";
+          }
+        }
+      }
+    </script>
+</head>
+
+<body>
+    <main>
+      <div class="navbar">
+        <a href="/manage.html">Manage</a>
+        <a href="/build.html">Build</a>
+        <a href="/view.html">View</a>
+      </div>
+      <div class="main">
+        <h1>KML Uploader</h1>
+        <div id="bigdiv">
+          <input type="text" id="search" onkeyup="search()" placeholder="Search for kmls..">
+          <ul id="kmls">
+            <li>
+              <button id="crud">+ Add KML</button>
+              <div class="content">
+                <label>Name:</label>
+                <input type="text" id="name" style="margin:8px"><br>
+                <button id="namesub" class="small">Create KML</button>
+              </div>
+            </li>
+            <ul>
+        </div>
+      </div>
+    </main>
+</body>
+</html>

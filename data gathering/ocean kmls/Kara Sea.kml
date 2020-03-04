@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Kara Sea.kml</name>
+	<LineStyle>
+		<color>afb7a3fd</color>
+	</LineStyle><PolyStyle>
+		<color>afb7a3fd</color>
+	</PolyStyle>
+	<Style id="s_ylw-pushpin_hl">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ffff0080</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>ffff0080</color>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ffff0080</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>ffff0080</color>
+		</PolyStyle>
+	</Style>
+	<Placemark>
+		<name>Kara Sea</name>
+		<description>The Kara Sea is part of the Arctic Ocean north of Siberia. It is separated from the Barents Sea to the west by the Kara Strait and Novaya Zemlya, and from the Laptev Sea to the east by the Severnaya Zemlya archipelago.</description>
+		<styleUrl>#m_ylw-pushpin</styleUrl>
+		<Polygon>
+			<tessellate>1</tessellate>
+			<gx:altitudeMode>clampToSeaFloor</gx:altitudeMode>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						69.66380067278428,76.57810836924992,0 60.94386944019734,74.37396835984194,0 55.28952472454789,71.95873640590463,0 58.98712350750683,70.49367269090567,0 68.14772576706201,68.64859234595677,0 66.59466718923947,70.28133016266283,0 67.28477999224303,73.28575801176004,0 75.31504803080016,73.46725530883909,0 83.95869608141274,74.22239640451299,0 89.33970834216029,75.65801507033794,0 96.73126996146836,76.3381027532929,0 98.50506216334315,77.81284115421012,0 90.0536156288245,80.089863444499,0 93.06309007281385,81.55096989463587,0 62.36953800890429,81.08696590176116,0 69.66380067278428,76.57810836924992,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+</Document>
+</kml>

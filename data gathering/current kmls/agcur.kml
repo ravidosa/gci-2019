@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Agulhas Current</name>
+    <description>The Agulhas Current is the western boundary current of the southwest Indian Ocean. It flows south along the east coast of Africa from 27°S to 40°S. It is narrow, swift and strong.</description>
+    <Style id="yellowLineGreenPoly">
+      <LineStyle>
+        <color>7f00ffff</color>
+        <width>4</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>7f00ff00</color>
+      </PolyStyle>
+    </Style>
+    <Placemark>
+      <name>Agulhas Current</name>
+      <description>The Agulhas Current is the western boundary current of the southwest Indian Ocean. It flows south along the east coast of Africa from 27°S to 40°S. It is narrow, swift and strong.</description>
+      <styleUrl>#yellowLineGreenPoly</styleUrl>
+      <LineString>
+        <altitudeMode>absolute</altitudeMode>
+        <coordinates>
+          44.67,-26.69,100000
+          41.06,-26.46,100000
+          40.07,-28.91,100000
+          38.19,-27.92,100000
+          38.02,-25.17,100000
+          36.44,-24.07,100000
+          36.01,-27.09,100000
+          32.42,-29.43,100000
+          23.22,-36.79,100000
+          22.10,-38.22,100000
+          21.19,-36.69,100000
+          15.61,-38.82,100000
+          17.55,-40.74,100000
+          19.92,-38.92,100000
+          24.36,-40.80,100000
+          24.75,-38.56,100000
+          28.96,-37.95,100000
+          31.79,-39.53,100000
+          30.36,-36.91,100000
+          37.54,-38.98,100000
+          38.36,-36.66,100000
+          42.88,-40.41,100000
+          46.40,-38.08,100000
+          50.81,-40.65,100000
+          53.72,-40.05,100000
+          55.67,-42.19,100000
+          58.38,-42.28,100000
+          59.88,-44.46,100000
+          63.97,-45.41,100000
+          65.00,-43.66,100000
+          70.64,-43.94,100000
+          73.20,-45.62,100000
+        </coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+  		<name>Untitled Polygon</name>
+  		<styleUrl>#msn_ylw-pushpin</styleUrl>
+  		<Polygon>
+  			<tessellate>1</tessellate>
+        <altitudeMode>absolute</altitudeMode>
+  			<outerBoundaryIs>
+  				<LinearRing>
+  					<coordinates>
+  						20.91342375468338,-37.69109601498256,100000 20.04835546999674,-36.42938799314234,100000 17.92186227811297,-38.2099095945247,100000 20.91342375468338,-37.69109601498256,100000
+  					</coordinates>
+  				</LinearRing>
+  			</outerBoundaryIs>
+  		</Polygon>
+  	</Placemark>
+    <Placemark>
+  		<name>Untitled Polygon</name>
+  		<styleUrl>#msn_ylw-pushpin</styleUrl>
+  		<Polygon>
+  			<tessellate>1</tessellate>
+        <altitudeMode>absolute</altitudeMode>
+  			<outerBoundaryIs>
+  				<LinearRing>
+  					<coordinates>
+  						41.95677819666553,-39.57570111458035,100000 41.05728948733302,-37.73431038706112,100000 39.65283620283619,-38.76036226423298,100000 41.95677819666553,-39.57570111458035,100000
+  					</coordinates>
+  				</LinearRing>
+  			</outerBoundaryIs>
+  		</Polygon>
+  	</Placemark>
+  </Document>
+</kml>

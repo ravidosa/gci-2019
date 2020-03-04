@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Gulf of Mexico.kml</name>
+	<open>1</open>
+	<LineStyle>
+		<color>3f499afd</color>
+	</LineStyle><PolyStyle>
+		<color>3f499afd</color>
+	</PolyStyle>
+	<Style id="sh_ylw-pushpin">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<BalloonStyle>
+		</BalloonStyle>
+		<LineStyle>
+			<color>ff66ccfe</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>ff66ccfe</color>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sn_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<BalloonStyle>
+		</BalloonStyle>
+		<LineStyle>
+			<color>ff66ccfe</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>ff66ccfe</color>
+		</PolyStyle>
+	</Style>
+	<Placemark>
+		<name>Gulf of Mexico</name>
+		<description>The Gulf of Mexico is an ocean basin and a marginal sea of the Atlantic Ocean, largely surrounded by the North American continent. It is bounded on the northeast, north and northwest by the Gulf Coast of the United States, on the southwest and south by Mexico, and on the southeast by Cuba.</description>
+		<styleUrl>#msn_ylw-pushpin</styleUrl>
+		<Polygon>
+			<tessellate>1</tessellate>
+			<gx:altitudeMode>clampToSeaFloor</gx:altitudeMode>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						-87.00836311942622,21.61501688117798,0 -80.7017871003074,24.91589067781537,0 -81.30818088323008,25.78326107584494,0 -81.92615152178797,25.63537539850987,0 -82.10768601546238,26.5821060558983,0 -83.0228379166913,27.65767716052068,0 -82.77609125676253,28.97642538372796,0 -84.0251129451652,30.1108384861402,0 -85.31375646351238,29.52168897405147,0 -86.31551226334045,30.28965162389146,0 -89.51278785593297,30.23172884756946,0 -89.23940996651353,29.58010895982724,0 -88.79157180701293,29.02080140799976,0 -90.33746989802887,28.98655535304126,0 -91.76423788185222,29.31165216165579,0 -94.10820134838238,29.39788766979803,0 -95.80765512465953,28.54410257956956,0 -97.15777642241778,27.95293224462478,0 -97.37179736467226,26.97183981729055,0 -97.00045556493133,26.16506138306122,0 -96.85213044039767,25.37359164506199,0 -97.51216799141477,25.03886055787899,0 -97.63252099325953,22.13085748378472,0 -95.58011901653958,18.97279047716085,0 -94.48267276050906,18.24129441626055,0 -91.75796578850357,18.90239688188016,0 -90.95498801792611,19.43496681955018,0 -90.63296808863745,20.85330180028378,0 -90.05306478540369,21.35698878660992,0 -88.21619648693807,21.7916300021639,0 -87.00836311942622,21.61501688117798,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+</Document>
+</kml>

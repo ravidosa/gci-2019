@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Barents Sea.kml</name>
+	<open>1</open>
+	<LineStyle>
+		<color>5e9da8fd</color>
+	</LineStyle><PolyStyle>
+		<color>5e9da8fd</color>
+	</PolyStyle>
+	<StyleMap id="msn_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<BalloonStyle>
+		</BalloonStyle>
+		<LineStyle>
+			<color>ffff66fd</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>ffff66fd</color>
+		</PolyStyle>
+	</Style>
+	<Style id="sn_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<BalloonStyle>
+		</BalloonStyle>
+		<LineStyle>
+			<color>ffff66fd</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>ffff66fd</color>
+		</PolyStyle>
+	</Style>
+	<Placemark>
+		<name>Barents Sea</name>
+		<description>The Barents Sea is a marginal sea of the Arctic Ocean, located off the northern coasts of Norway and Russia and is divided between Norwegian and Russian territorial waters. Known among Russians in the Middle Ages as the Murman Sea, the sea takes its current name from the Dutch navigator Willem Barentsz.</description>
+		<styleUrl>#msn_ylw-pushpin</styleUrl>
+		<Polygon>
+			<tessellate>1</tessellate>
+			<gx:altitudeMode>clampToSeaFloor</gx:altitudeMode>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						23.01497346383771,78.79308497996746,0 25.67187781290408,77.11523944055509,0 19.1013152205954,77.34105672288798,0 16.00940492066128,76.08517265454766,0 26.48037616314279,71.02803917969553,0 30.18738797755522,70.72050371024574,0 34.07311555411799,69.39116298145072,0 41.18368706306536,68.3715184748033,0 44.09434698008806,69.52584479371744,0 48.02542675432971,67.45864495277527,0 53.36696808265835,68.76283491941825,0 58.55505264138746,69.87631742408311,0 49.59206111973898,71.16664976637381,0 54.62463168813844,76.58065263774891,0 67.49236602165705,77.16647524398948,0 65.27557987459747,80.75451392550974,0 49.46627352594184,80.46470888679099,0 29.44510287625021,79.47128317927616,0 23.01497346383771,78.79308497996746,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+</Document>
+</kml>

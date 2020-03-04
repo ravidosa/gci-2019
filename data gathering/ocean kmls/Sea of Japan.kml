@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Sea of Japan.kml</name>
+	<LineStyle>
+		<color>4babc8fd</color>
+	</LineStyle><PolyStyle>
+		<color>4babc8fd</color>
+	</PolyStyle>
+	<StyleMap id="m_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff0affff</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>ff0affff</color>
+		</PolyStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff0affff</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>ff0affff</color>
+		</PolyStyle>
+	</Style>
+	<Placemark>
+		<name>Sea of Japan</name>
+		<description>The Sea of Japan is the marginal sea between the Japanese archipelago, Sakhalin, the Korean Peninsula and Russia. The Japanese archipelago separates the sea from the Pacific Ocean. It is bordered by Japan, Korea and Russia.</description>
+		<styleUrl>#m_ylw-pushpin</styleUrl>
+		<Polygon>
+			<tessellate>1</tessellate>
+			<gx:altitudeMode>clampToSeaFloor</gx:altitudeMode>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						140.036589361097,47.70593467224838,0 133.9265491291815,42.28391935157171,0 131.0476104935953,42.287295930688,0 127.6534014700406,39.52876008841898,0 129.6262246931533,37.16563045019024,0 129.2126266650551,35.09938425130028,0 130.7547549895313,33.821062380548,0 135.5867938383015,36.41749670693054,0 137.8572764228725,37.46109063789527,0 139.1621889467325,39.57476168968169,0 139.4625185391039,42.77772216055623,0 141.454648780797,43.87774487771103,0 140.8985184139886,51.35759160539807,0 140.036589361097,47.70593467224838,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+</Document>
+</kml>

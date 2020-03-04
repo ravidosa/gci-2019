@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>South Pacific Gyre</name>
+    <description>The Southern Pacific Gyre is part of the Earth’s system of rotating ocean currents, bounded by the Equator to the north, Australia to the west, the Antarctic Circumpolar Current to the south, and South America to the east.</description>
+    <Style id="yellowLineGreenPoly">
+      <LineStyle>
+        <color>7f00ffff</color>
+        <width>4</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>7f00ff00</color>
+      </PolyStyle>
+    </Style>
+    <Placemark>
+      <name>South Pacific Gyre</name>
+      <description>The Southern Pacific Gyre is part of the Earth’s system of rotating ocean currents, bounded by the Equator to the north, Australia to the west, the Antarctic Circumpolar Current to the south, and South America to the east.</description>
+      <styleUrl>#yellowLineGreenPoly</styleUrl>
+      <LineString>
+        <altitudeMode>absolute</altitudeMode>
+        <coordinates>
+          -92.89,-0.66,100000
+          -96.05,-0.76,100000
+          -101.68,0.85,100000
+          -106.09,-0.20,100000
+          -108.96,1.16,100000
+          -113.44,1.90,100000
+          -120.86,0.90,100000
+          -126.95,1.71,100000
+          -133.93,2.61,100000
+          -137.87,1.48,100000
+          -141.01,-1.05,100000
+          -145.28,-0.84,100000
+          -149.38,1.49,100000
+          -154.73,-0.04,100000
+          -157.93,5.01,100000
+        </coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+  		<name>Untitled Polygon</name>
+  		<open>1</open>
+  		<styleUrl>#msn_ylw-pushpin</styleUrl>
+  		<Polygon>
+  			<tessellate>1</tessellate>
+        <altitudeMode>absolute</altitudeMode>
+  			<outerBoundaryIs>
+  				<LinearRing>
+  					<coordinates>
+  						238.6122662685502,2.663833856210489,100000 232.2511157716795,1.773172499053236,100000 237.9513550240207,-0.3014452767735655,100000 238.6122662685502,2.663833856210489,100000
+  					</coordinates>
+  				</LinearRing>
+  			</outerBoundaryIs>
+  		</Polygon>
+  	</Placemark>
+  </Document>
+</kml>

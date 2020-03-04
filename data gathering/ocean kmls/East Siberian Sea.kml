@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>East Siberian Sea.kml</name>
+	<open>1</open>
+	<LineStyle>
+		<color>4a171dfd</color>
+	</LineStyle><PolyStyle>
+		<color>4a171dfd</color>
+	</PolyStyle>
+	<Style id="sn_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<BalloonStyle>
+		</BalloonStyle>
+		<LineStyle>
+			<color>ff66ff66</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>ff66ff66</color>
+		</PolyStyle>
+	</Style>
+	<Style id="sh_ylw-pushpin">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<BalloonStyle>
+		</BalloonStyle>
+		<LineStyle>
+			<color>ff66ff66</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>ff66ff66</color>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Placemark>
+		<name>East Siberian Sea</name>
+		<description>The East Siberian Sea is a marginal sea in the Arctic Ocean. It is located between the Arctic Cape to the north, the coast of Siberia to the south, the New Siberian Islands to the west and Cape Billings, close to Chukotka, and Wrangel Island to the east.</description>
+		<styleUrl>#msn_ylw-pushpin</styleUrl>
+		<Polygon>
+			<tessellate>1</tessellate>
+			<gx:altitudeMode>clampToSeaFloor</gx:altitudeMode>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						140.8127901573274,74.429560644337,0 144.3407513273255,73.64366048400376,0 150.2273579458049,71.99279371858722,0 153.35495016215,71.28046811168717,0 160.2726054802807,71.01200355170276,0 161.0354553187479,69.86751250075706,0 166.5595756478712,70.09957237183718,0 172.207681544283,70.15710963923073,0 176.2775232776606,70.01276289925799,0 174.1111729916933,72.63635066121847,0 152.6942381222168,74.84249622847879,0 140.8127901573274,74.429560644337,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+</Document>
+</kml>

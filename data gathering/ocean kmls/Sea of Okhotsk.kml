@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Sea of Okhotsk.kml</name>
+	<open>1</open>
+	<LineStyle>
+		<color>1d361dfd</color>
+	</LineStyle><PolyStyle>
+		<color>1d361dfd</color>
+	</PolyStyle>
+	<StyleMap id="m_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin0</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin0">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ffcf6ffd</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>ffcf6ffd</color>
+		</PolyStyle>
+	</Style>
+	<Style id="s_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ffcf6ffd</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>ffcf6ffd</color>
+		</PolyStyle>
+	</Style>
+	<Placemark>
+		<name>Sea of Okhotsk</name>
+		<description>The Sea of Okhotsk is a marginal sea of the western Pacific Ocean, between the Kamchatka Peninsula on the east, the Kuril Islands on the southeast, the island of Hokkaido to the south, the island of Sakhalin along the west, and a long stretch of eastern Siberian coast along the west and north.</description>
+		<styleUrl>#m_ylw-pushpin</styleUrl>
+		<Polygon>
+			<tessellate>1</tessellate>
+			<gx:altitudeMode>clampToSeaFloor</gx:altitudeMode>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						162.2862134251138,60.87388442700106,0 156.8900154880231,60.16187634603027,0 155.1852962685583,58.77638299064502,0 149.7699101032745,58.36970971186623,0 142.6539667041066,58.48605866113624,0 139.750405745573,54.63676892035733,0 140.9161541203666,53.31712996897811,0 142.7878116508567,54.96108037839511,0 144.8750237698932,48.5159822198916,0 143.1434905389571,48.18430117466118,0 143.8396999460987,46.14894408731793,0 143.2370012415705,45.39650562734458,0 144.9716115420532,43.99128446050737,0 153.5108367811624,49.36315726506412,0 155.7814641517978,53.07530571298371,0 155.280719529808,56.37289382043225,0 157.1366185288829,58.65889377019779,0 162.2862134251138,60.87388442700106,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+</Document>
+</kml>

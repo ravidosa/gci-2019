@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Davis Strait.kml</name>
+	<LineStyle>
+		<color>748f51fd</color>
+	</LineStyle><PolyStyle>
+		<color>748f51fd</color>
+	</PolyStyle>
+	<Style id="s_ylw-pushpin_hl">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ffccff66</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>ffccff66</color>
+		</PolyStyle>
+	</Style>
+	<Style id="s_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ffccff66</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>ffccff66</color>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Placemark>
+		<name>Davis Strait</name>
+		<description>Davis Strait is a northern arm of the Labrador Sea. It lies between mid-western Greenland and Nunavut, Canada&apos;s Baffin Island. To the north is Baffin Bay. The strait was named for the English explorer John Davis, who explored the area while seeking a Northwest Passage. By the 1650s it was used for whale hunting.</description>
+		<styleUrl>#m_ylw-pushpin</styleUrl>
+		<Polygon>
+			<tessellate>1</tessellate>
+			<gx:altitudeMode>clampToSeaFloor</gx:altitudeMode>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						-45.24583452494941,59.93482593185264,0 -46.29551286019686,60.54003985271181,0 -47.18623095763237,60.64404975478639,0 -48.30160130949229,60.58816903679087,0 -50.38002966706242,62.34393645757739,0 -52.26484816390567,63.99649965134938,0 -52.46543520041098,65.08134654680102,0 -53.50010305664868,65.43534276600536,0 -53.86057499954157,65.99851939770113,0 -54.02541544216893,67.20299734159505,0 -53.26189272111687,68.79784646930594,0 -51.55561438752045,68.58547737892991,0 -51.27293566557224,69.10843876657131,0 -51.70032198107534,69.48308067235034,0 -53.60526702330043,69.14062889365974,0 -67.44612014018919,69.07627987782271,0 -66.85212756605581,68.49255331661878,0 -64.95276877888304,68.0918663026149,0 -62.35934112271338,67.19408615190829,0 -61.21369151926007,66.58720466222208,0 -62.05424467892839,65.5478962315759,0 -63.20986722639206,65.37122464847442,0 -63.39627802730139,64.79120032735527,0 -64.7337842176717,65.04424280999633,0 -65.86542895883602,65.83619868745731,0 -67.00061078777451,66.26255780363711,0 -67.00964506889426,65.71939076851871,0 -66.32890119956761,64.99758504445495,0 -65.06103634833957,64.73237870304602,0 -63.68416413617163,63.50960470534647,0 -63.84978492074264,63.1224172504747,0 -64.36504423738639,63.29294607871957,0 -64.92425665791112,62.78033148585102,0 -63.87285093174856,62.48622522995721,0 -64.58731634356222,62.30721835341408,0 -67.45890773794292,63.1761886440999,0 -65.81193031591187,62.1178402052242,0 -66.014349325544,61.59330880776155,0 -64.72456770141102,60.61714211685771,0 -45.24583452494941,59.93482593185264,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+</Document>
+</kml>

@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Liquid Galaxy Dashboard</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/7.6.2/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/7.6.2/firebase-auth.js"></script>
+    <script defer src="/__/firebase/7.6.2/firebase-database.js"></script>
+    <script defer src="/__/firebase/7.6.2/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/7.6.2/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="projects.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Karla|Quicksand|Space+Mono" rel="stylesheet">
+    <script type="text/javascript">
+      function toggleSignIn() {
+        if (firebase.auth().currentUser) {
+          // [START signout]
+          firebase.auth().signOut();
+          window.location.replace("https://liquidgalaxydashboard.firebaseapp.com");
+          // [END signout]
+        } else {
+          var email = document.getElementById('email').value;
+          var password = document.getElementById('password').value;
+          if (email.length < 4) {
+            alert('Please enter an email address.');
+            return;
+          }
+          if (password.length < 4) {
+            alert('Please enter a password.');
+            return;
+          }
+          // Sign in with email and pass.
+          // [START authwithemail]
+          firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            // [START_EXCLUDE]
+            if (errorCode === 'auth/wrong-password') {
+              alert('Wrong password.');
+            } else {
+              alert(errorMessage);
+            }
+            console.log(error);
+            // [END_EXCLUDE]
+          });
+          // [END authwithemail]
+        }
+      }
+
+      /**
+       * Handles the sign up button press.
+       */
+      function handleSignUp() {
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+        if (email.length < 4) {
+          alert('Please enter an email address.');
+          return;
+        }
+        if (password.length < 4) {
+          alert('Please enter a password.');
+          return;
+        }
+        // Create user with email and pass.
+        // [START createwithemail]
+        firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+          // Handle Errors here.
+          var errorCode = error.code;
+          var errorMessage = error.message;
+          // [START_EXCLUDE]
+          if (errorCode == 'auth/weak-password') {
+            alert('The password is too weak.');
+          } else {
+            alert(errorMessage);
+          }
+          console.log(error);
+          // [END_EXCLUDE]
+        });
+        // [END createwithemail]
+      }
+
+      /**
+       * Sends an email verification to the user.
+       */
+      function sendEmailVerification() {
+        // [START sendemailverification]
+        firebase.auth().currentUser.sendEmailVerification().then(function() {
+          // Email Verification sent!
+          // [START_EXCLUDE]
+          alert('Email Verification Sent!');
+          // [END_EXCLUDE]
+        });
+        // [END sendemailverification]
+      }
+
+      function sendPasswordReset() {
+        var email = document.getElementById('email').value;
+        // [START sendpasswordemail]
+        firebase.auth().sendPasswordResetEmail(email).then(function() {
+          // Password Reset Email Sent!
+          // [START_EXCLUDE]
+          alert('Password Reset Email Sent!');
+          // [END_EXCLUDE]
+        }).catch(function(error) {
+          // Handle Errors here.
+          var errorCode = error.code;
+          var errorMessage = error.message;
+          // [START_EXCLUDE]
+          if (errorCode == 'auth/invalid-email') {
+            alert(errorMessage);
+          } else if (errorCode == 'auth/user-not-found') {
+            alert(errorMessage);
+          }
+          console.log(error);
+          // [END_EXCLUDE]
+        });
+        // [END sendpasswordemail];
+      }
+
+      /**
+       * initApp handles setting up UI event listeners and registering Firebase auth listeners:
+       *  - firebase.auth().onAuthStateChanged: This listener is called when the user is signed in or
+       *    out, and that is where we update the UI.
+       */
+      function initApp() {
+        // Listening for auth state changes.
+        // [START authstatelistener]
+        firebase.auth().onAuthStateChanged(function(user) {
+          // [START_EXCLUDE silent]
+          // [END_EXCLUDE]
+          if (user) {
+            // User is signed in.
+            var displayName = user.displayName;
+            var email = user.email;
+            var emailVerified = user.emailVerified;
+            var photoURL = user.photoURL;
+            var isAnonymous = user.isAnonymous;
+            var uid = user.uid;
+            var providerData = user.providerData;
+            document.getElementById('signin').textContent = 'Sign out';
+          }
+        });
+        // [END authstatelistener]
+
+        document.getElementById('signin').addEventListener('click', toggleSignIn, false);
+      }
+
+      window.onload = function() {
+        initApp();
+      };
+    </script>
+    <style media="screen">
+      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
+      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
+      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
+      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
+      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
+      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
+      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
+    </style>
+  </head>
+  <body>
+
+    <div>
+
+      <!-- Header section containing title -->
+      <header>
+        <div class="navbar">
+          <a href="/" id="head"><h3 class="navbark" style="background-size: 40px;padding-top: 10px;padding-bottom: 10px;color: white;font-family: quicksand;">Liquid Galaxy Dashboard</h3></a>
+          <button id="navbutton" style="padding-top: 0px;"><h3 class="navbark" id="signin" style="background-size: 40px;padding-top: 10px;padding-bottom: 10px;color: white;font-family: quicksand;">Sign In</h3></button>
+        </div>
+      </header>
+      <div class="sidenav">
+        <a href="https://liquidgalaxydashboard.firebaseapp.com/dashboard.html">Dashboard</a>
+        <a href="https://liquidgalaxydashboard.firebaseapp.com/projects.html" style="background-color: #f1f1f1;">Projects</a>
+        <a href="https://liquidgalaxydashboard.firebaseapp.com/tutorials.html">Tutorials</a>
+        <a href="https://liquidgalaxydashboard.firebaseapp.com/sensors.html">Sensors</a>
+      </div>
+      <main>
+        <div class="grid-container">
+          <div class="grid-item" onclick="document.getElementById('id01').style.display='block'" style="background-image: url(img/kmlapi.png); background-size: cover;"><p>KML Uploader API</p></div>
+          <div class="grid-item" onclick="document.getElementById('id02').style.display='block'" style="background-image: url(img/galpong.png); background-size: cover;"><p>Galaxy Pong</p></div>
+          <div class="grid-item" onclick="document.getElementById('id03').style.display='block'" style="background-image: url(img/galsnake.png); background-size: cover;"><p>Galaxy Snake</p></div>
+          <div class="grid-item" onclick="document.getElementById('id04').style.display='block'" style="background-image: url(img/hapis.png); background-size: cover;"><p>HAPIS</p></div>
+          <div class="grid-item" onclick="document.getElementById('id05').style.display='block'" style="background-image: url(img/airmashup.png); background-size: cover;"><p>Airmashup</p></div>
+          <div class="grid-item" onclick="document.getElementById('id06').style.display='block'" style="background-image: url(img/dronecoria.jpg); background-size: cover;"><p>Dronecoria</p></div>
+          <div class="grid-item" onclick="document.getElementById('id07').style.display='block'" style="background-image: url(img/lgxedu.jpeg); background-size: cover;"><p>LGxEDU</p></div>
+          <div class="grid-item" onclick="document.getElementById('id08').style.display='block'" style="background-image: url(img/gapi.png); background-size: cover;"><p>Google Assistant API</p></div>
+          <div class="grid-item" onclick="document.getElementById('id09').style.display='block'" style="background-image: url(img/lgpoi.png); background-size: cover;"><p>POIs Controller</p></div>
+          <div class="grid-item" onclick="document.getElementById('id10').style.display='block'" style="background-image: url(img/lgxvoice.jpg); background-size: cover;"><p>LGxVoice Control</p></div>
+          <div class="grid-item" onclick="document.getElementById('id11').style.display='block'" style="background-image: url(img/wikimedia.png); background-size: cover;"><p>Wikimedia Data Project</p></div>
+          <div class="grid-item" onclick="document.getElementById('id12').style.display='block'" style="background-image: url(img/savt.png); background-size: cover;"><p>Smart Agro Visualization Tool</p></div>
+          <div class="grid-item" onclick="document.getElementById('id13').style.display='block'" style="background-image: url(img/pilt.png); background-size: cover;"><p>Panoramic Interactive Live Tracker</p></div>
+          <div class="grid-item" onclick="document.getElementById('id14').style.display='block'" style="background-image: url(img/dronelog.jpg); background-size: cover;"><p>Drone Logistics Platform</p></div>
+        </div>
+        <div id="id01" class="w3-modal">
+          <div class="w3-modal-content">
+            <header class="w3-container w3-blue">
+              <span onclick="document.getElementById('id01').style.display='none'"
+              class="w3-button w3-display-topright">&times;</span>
+              <h2>KML Uploader API</h2>
+            </header>
+
+            <div class="w3-container">
+              <p class="modaltext">The KML Uploader is an API designed to send KML files to Liquid Galaxy. It accesses the file system to store and read from a list of KMLs that can then be displayed in Google Earth. It can also be used to create placemarks and tours and to send queries.</p>
+              <br>
+              <p class="modaltext">Technologies used: Swagger.io, Node.js, Express.js</p>
+            </div>
+
+            <footer class="w3-container w3-blue">
+              <div class="modalfoot"><a href="https://github.com/LiquidGalaxyLAB/liquid-galaxy-kml-uploader">Github</a></div>
+            </footer>
+          </div>
+        </div>
+        <div id="id02" class="w3-modal">
+          <div class="w3-modal-content">
+            <header class="w3-container w3-blue">
+              <span onclick="document.getElementById('id02').style.display='none'"
+              class="w3-button w3-display-topright">&times;</span>
+              <h2>Galaxy Pong</h2>
+            </header>
+
+            <div class="w3-container">
+              <p class="modaltext">Galaxy Pong is an implementation of the game Pong in Liquid Galaxy. The screens can be used to viewsync and display the game screen, and phones can be used as the controllers for the paddles.</p>
+              <br>
+              <p class="modaltext">Technologies used: Socket.io, Express.js, Node.js</p>
+            </div>
+
+            <footer class="w3-container w3-blue">
+              <div class="modalfoot"><a href="https://github.com/LiquidGalaxyLAB/galaxy-pong">Github</a></div>
+            </footer>
+          </div>
+        </div>
+        <div id="id03" class="w3-modal">
+          <div class="w3-modal-content">
+            <header class="w3-container w3-blue">
+              <span onclick="document.getElementById('id03').style.display='none'"
+              class="w3-button w3-display-topright">&times;</span>
+              <h2>Galaxy Snake</h2>
+            </header>
+
+            <div class="w3-container">
+              <p class="modaltext">Galaxy Snake is an implementation of the game Snake in Liquid Galaxy. The screens can be used to viewsync and display the game screen, and phones or arrow keys can be used as the controllers for the snakes.</p>
+              <br>
+              <p class="modaltext">Technologies used: Socket.io, Express.js, Node.js</p>
+            </div>
+
+            <footer class="w3-container w3-blue">
+              <div class="modalfoot"><a href="https://github.com/LiquidGalaxyLAB/galaxy-snake">Github</a></div>
+            </footer>
+          </div>
+        </div>
+        <div id="id04" class="w3-modal">
+          <div class="w3-modal-content">
+            <header class="w3-container w3-blue">
+              <span onclick="document.getElementById('id04').style.display='none'"
+              class="w3-button w3-display-topright">&times;</span>
+              <h2>HAPIS</h2>
+            </header>
+
+            <div class="w3-container">
+              <p class="modaltext">HAPIS collects data about homelessness and people in need through online forms and displays it on Liquid Galaxy.</p>
+              <br>
+              <p class="modaltext">Technologies used: Node.js, MongoDB, Vue.js</p>
+            </div>
+
+            <footer class="w3-container w3-blue">
+              <div class="modalfoot"><a href="https://github.com/LiquidGalaxyLAB/Python-library-for-real-time-data-visualization----Web-Interface">Github</a></div>
+            </footer>
+          </div>
+        </div>
+        <div id="id05" class="w3-modal">
+          <div class="w3-modal-content">
+            <header class="w3-container w3-blue">
+              <span onclick="document.getElementById('id05').style.display='none'"
+              class="w3-button w3-display-topright">&times;</span>
+              <h2>AirMashup</h2>
+            </header>
+
+            <div class="w3-container">
+              <p class="modaltext">Airmashup displays aviation-related data in Liquid Galaxy. It shows airways, airports, flight, and other elements of the aircraft industry.</p>
+              <br>
+              <p class="modaltext">Technologies used: Python, Node.js, Open Sky Network API</p>
+            </div>
+
+            <footer class="w3-container w3-blue">
+              <div class="modalfoot"><a href="https://github.com/LiquidGalaxyLAB/AirMashup">Github</a></div>
+            </footer>
+          </div>
+        </div>
+        <div id="id06" class="w3-modal">
+          <div class="w3-modal-content">
+            <header class="w3-container w3-blue">
+              <span onclick="document.getElementById('id06').style.display='none'"
+              class="w3-button w3-display-topright">&times;</span>
+              <h2>Dronecoria</h2>
+            </header>
+
+            <div class="w3-container">
+              <p class="modaltext">Dronecoria is a web application that works with Liquid Galaxy to send and identify images of burnt regions. It uses machine learning and is trained by the user.</p>
+              <br>
+              <p class="modaltext">Technologies used: Python, DeepLab, SQLite</p>
+            </div>
+
+            <footer class="w3-container w3-blue">
+              <div class="modalfoot"><a href="https://github.com/LiquidGalaxyLAB/GSOC-2019-Dronecoria">Github</a></div>
+            </footer>
+          </div>
+        </div>
+        <div id="id07" class="w3-modal">
+          <div class="w3-modal-content">
+            <header class="w3-container w3-blue">
+              <span onclick="document.getElementById('id07').style.display='none'"
+              class="w3-button w3-display-topright">&times;</span>
+              <h2>LGxEDU</h2>
+            </header>
+
+            <div class="w3-container">
+              <p class="modaltext">LGxEDU is an educational app that can be used in classrooms. It can remotely control Liquid Galaxy, run quizzes, and display tours. It uses a wifi connection to send data to the Liquid Galaxy.</p>
+              <br>
+              <p class="modaltext">Technologies used: Java, XML, Android Studio</p>
+            </div>
+
+            <footer class="w3-container w3-blue">
+              <div class="modalfoot"><a href="https://github.com/LiquidGalaxyLAB/LGxEDU">Github</a></div>
+            </footer>
+          </div>
+        </div>
+        <div id="id08" class="w3-modal">
+          <div class="w3-modal-content">
+            <header class="w3-container w3-blue">
+              <span onclick="document.getElementById('id08').style.display='none'"
+              class="w3-button w3-display-topright">&times;</span>
+              <h2>Google Assistant API</h2>
+            </header>
+
+            <div class="w3-container">
+              <p class="modaltext">The Google Assistant API implements the Google Assistant as a way of controlling the Liquid Galaxy. Natural Language Processing is used to parse requests and send them to the Liquid Galaxy.</p>
+              <br>
+              <p class="modaltext">Technologies used: Ngrok, Node, DialogFlow</p>
+            </div>
+
+            <footer class="w3-container w3-blue">
+              <div class="modalfoot"><a href="https://github.com/LiquidGalaxyLAB/Google-Assistant-API-for-liquid-Galaxy">Github</a></div>
+            </footer>
+          </div>
+        </div>
+        <div id="id09" class="w3-modal">
+          <div class="w3-modal-content">
+            <header class="w3-container w3-blue">
+              <span onclick="document.getElementById('id09').style.display='none'"
+              class="w3-button w3-display-topright">&times;</span>
+              <h2>Liquid Galaxy POIs Controller</h2>
+            </header>
+
+            <div class="w3-container">
+              <p class="modaltext">The Controller app is used to control the Liquid Galaxy remotely and send it to different landmarks. It is included with LGxEDU.</p>
+              <br>
+              <p class="modaltext">Technologies used: Java, XML, Android Studio</p>
+            </div>
+
+            <footer class="w3-container w3-blue">
+              <div class="modalfoot"><a href="https://github.com/LiquidGalaxyLAB/Liquid-Galaxy-POIs-Controller">Github</a></div>
+            </footer>
+          </div>
+        </div>
+        <div id="id10" class="w3-modal">
+          <div class="w3-modal-content">
+            <header class="w3-container w3-blue">
+              <span onclick="document.getElementById('id10').style.display='none'"
+              class="w3-button w3-display-topright">&times;</span>
+              <h2>LGxVoice Control</h2>
+            </header>
+
+            <div class="w3-container">
+              <p class="modaltext">LGxVoiceControl is used to control the Liquid Galaxy through voice input. It is meant to be integrated with the Google Assistant.</p>
+              <br>
+              <p class="modaltext">Technologies used: DialogFlow, Firebase, Bash</p>
+            </div>
+
+            <footer class="w3-container w3-blue">
+              <div class="modalfoot"><a href="https://github.com/LiquidGalaxyLAB/LGxVoiceControl-1">Github</a></div>
+            </footer>
+          </div>
+        </div>
+        <div id="id11" class="w3-modal">
+          <div class="w3-modal-content">
+            <header class="w3-container w3-blue">
+              <span onclick="document.getElementById('id11').style.display='none'"
+              class="w3-button w3-display-topright">&times;</span>
+              <h2>Wikimedia Data Project</h2>
+            </header>
+
+            <div class="w3-container">
+              <p class="modaltext">The Wikimedia Data Project shows data from Wikidata in Liquid Galaxy. It has a nice user experience, and can be used to create tours.</p>
+              <br>
+              <p class="modaltext">Technologies used: Python, Django, Material Design</p>
+            </div>
+
+            <footer class="w3-container w3-blue">
+              <div class="modalfoot"><a href="https://github.com/LiquidGalaxyLAB/WikimediaDataProject">Github</a></div>
+            </footer>
+          </div>
+        </div>
+        <div id="id12" class="w3-modal">
+          <div class="w3-modal-content">
+            <header class="w3-container w3-blue">
+              <span onclick="document.getElementById('id12').style.display='none'"
+              class="w3-button w3-display-topright">&times;</span>
+              <h2>Smart Agro Visualization Technology</h2>
+            </header>
+
+            <div class="w3-container">
+              <p class="modaltext">The Smart Agro Visualization tool creates a user friendly experience for visualizing smart agriculture data using sensors and drone images. It is related to Fly Over Your Big Data.</p>
+              <br>
+              <p class="modaltext">Technologies used: Node.js, Express.js, MongoDB</p>
+            </div>
+
+            <footer class="w3-container w3-blue">
+              <div class="modalfoot"><a href="https://github.com/LiquidGalaxyLAB/SmartAgroVisualizationTool">Github</a></div>
+            </footer>
+          </div>
+        </div>
+        <div id="id13" class="w3-modal">
+          <div class="w3-modal-content">
+            <header class="w3-container w3-blue">
+              <span onclick="document.getElementById('id13').style.display='none'"
+              class="w3-button w3-display-topright">&times;</span>
+              <h2>Fly Over Your Big Data</h2>
+            </header>
+
+            <div class="w3-container">
+              <p class="modaltext">Fly Over Your Big Data uses Spark and Django to visualize data relating to weather and earthquakes. It uses Weather Open Data from AEMET and Earthquakes Open Data from USGS.</p>
+              <br>
+              <p class="modaltext">Technologies used: Python, Spark, Django, Cassandra</p>
+            </div>
+
+            <footer class="w3-container w3-blue">
+              <div class="modalfoot"><a href="https://github.com/LiquidGalaxyLAB/FlOYBD">Github</a></div>
+            </footer>
+          </div>
+        </div>
+        <div id="id14" class="w3-modal">
+          <div class="w3-modal-content">
+            <header class="w3-container w3-blue">
+              <span onclick="document.getElementById('id14').style.display='none'"
+              class="w3-button w3-display-topright">&times;</span>
+              <h2>Panoramic Interactive Live Tracker</h2>
+            </header>
+
+            <div class="w3-container">
+              <p class="modaltext">PILT receives data and translates it to KML and then sends it to Liquid Galaxy. It is used to display static and dynamic information.</p>
+              <br>
+              <p class="modaltext">Technologies used: Python, SQLite, Bash</p>
+            </div>
+
+            <footer class="w3-container w3-blue">
+              <div class="modalfoot"><a href="https://github.com/LiquidGalaxyLAB/PILT">Github</a></div>
+            </footer>
+          </div>
+        </div>
+        <div id="id15" class="w3-modal">
+          <div class="w3-modal-content">
+            <header class="w3-container w3-blue">
+              <span onclick="document.getElementById('id15').style.display='none'"
+              class="w3-button w3-display-topright">&times;</span>
+              <h2>Drone Logistics Platform</h2>
+            </header>
+
+            <div class="w3-container">
+              <p class="modaltext">DLP converts FAED code to DLP, debugs and documents it. It displays information about drone drop points and hangars as well as useful information on the weather.</p>
+              <br>
+              <p class="modaltext">Technologies used: Python, Google Maps API, OpenWeatherMap API</p>
+            </div>
+
+            <footer class="w3-container w3-blue">
+              <div class="modalfoot"><a href="https://github.com/LiquidGalaxyLAB/DLP">Github</a></div>
+            </footer>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

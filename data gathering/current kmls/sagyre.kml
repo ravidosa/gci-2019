@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>South Atlantic Gyre</name>
+    <description>The South Atlantic Gyre is the subtropical gyre in the south Atlantic Ocean. In the southern portion of the gyre, northwesterly winds drive eastward-flowing currents that are difficult to distinguish from the northern boundary of the Antarctic Circumpolar Current.</description>
+    <Style id="yellowLineGreenPoly">
+      <LineStyle>
+        <color>7f00ffff</color>
+        <width>4</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>7f00ff00</color>
+      </PolyStyle>
+    </Style>
+    <Placemark>
+      <name>South Atlantic Gyre</name>
+      <description>The South Atlantic Gyre is the subtropical gyre in the south Atlantic Ocean. In the southern portion of the gyre, northwesterly winds drive eastward-flowing currents that are difficult to distinguish from the northern boundary of the Antarctic Circumpolar Current.</description>
+      <styleUrl>#yellowLineGreenPoly</styleUrl>
+      <LineString>
+        <altitudeMode>absolute</altitudeMode>
+        <coordinates>
+          -20.61,0.63,100000
+          -24.97,0.57,100000
+          -27.78,3.12,100000
+          -34.12,1.21,100000
+          -39.26,0.80,100000
+          -46.70,2.56,100000
+          -50.30,5.77,100000
+          -53.33,6.81,100000
+          -54.58,8.59,100000
+          -57.83,10.05,100000
+          -63.81,11.37,100000
+          -65.09,13.32,100000
+          -66.94,12.49,100000
+          -68.94,13.84,100000
+          -71.44,13.14,100000
+          -73.16,14.75,100000
+          -75.52,16.74,100000
+        </coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+  		<name></name>
+  		<styleUrl>#msn_ylw-pushpin</styleUrl>
+  		<Polygon>
+  			<tessellate>1</tessellate>
+        <altitudeMode>absolute</altitudeMode>
+  			<outerBoundaryIs>
+  				<LinearRing>
+  					<coordinates>
+  						-35.29207332866655,0.9653667462374536,100000 -37.35971817625909,1.747551920094809,100000 -37.33688639367073,0.1725456177806091,100000 -35.29207332866655,0.9653667462374536,100000
+  					</coordinates>
+  				</LinearRing>
+  			</outerBoundaryIs>
+  		</Polygon>
+  	</Placemark>
+    <Placemark>
+  		<name></name>
+  		<styleUrl>#msn_ylw-pushpin</styleUrl>
+  		<Polygon>
+  			<tessellate>1</tessellate>
+        <altitudeMode>absolute</altitudeMode>
+  			<outerBoundaryIs>
+  				<LinearRing>
+  					<coordinates>
+  						-55.50685735575491,9.123593845597188,100000 -57.33316720225914,10.5241185476531,100000 -58.02444686900753,9.440439762910962,100000 -55.50685735575491,9.123593845597188,100000
+  					</coordinates>
+  				</LinearRing>
+  			</outerBoundaryIs>
+  		</Polygon>
+  	</Placemark>
+  </Document>
+</kml>

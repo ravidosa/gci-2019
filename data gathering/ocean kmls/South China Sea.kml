@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>South China Sea.kml</name>
+	<open>1</open>
+	<LineStyle>
+		<color>e26784fd</color>
+	</LineStyle><PolyStyle>
+		<color>e26784fd</color>
+	</PolyStyle>
+	<Style id="sn_ylw-pushpin">
+		<BalloonStyle>
+		</BalloonStyle>
+		<LineStyle>
+			<color>ff800040</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>ff800040</color>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="msn_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#sn_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#sh_ylw-pushpin</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="sh_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<BalloonStyle>
+		</BalloonStyle>
+		<LineStyle>
+			<color>ff800040</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>ff800040</color>
+		</PolyStyle>
+	</Style>
+	<Placemark>
+		<name>South China Sea</name>
+		<description>The South China Sea is a marginal sea that is part of the Pacific Ocean, encompassing an area from the Karimata and Malacca straits to the Strait of Taiwan of around 3,500,000 square kilometres.</description>
+		<styleUrl>#msn_ylw-pushpin</styleUrl>
+		<Polygon>
+			<tessellate>1</tessellate>
+			<gx:altitudeMode>clampToSeaFloor</gx:altitudeMode>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						109.7334619285438,11.65423922951179,0 105.3077782251956,8.016367381632774,0 102.4422417633785,11.77587148176334,0 100.1785749849174,12.96715972566749,0 99.59572659852553,9.652141779930041,0 101.7118385258184,7.226352480955378,0 103.8356303312481,4.700645076174636,0 104.0625708936417,2.908098241346044,0 106.0692152415346,-1.383271299898069,0 109.9439568471407,-3.106300291906228,0 108.1957458837204,1.351626887564623,0 110.593399242308,2.540008511105043,0 115.0008914128183,5.322807464783657,0 117.1838253012051,8.65475937781188,0 119.3850219604699,11.88191864646028,0 119.4880543344449,14.98696400281951,0 120.060930265659,18.25449265571172,0 119.9613033058346,24.08366447432472,0 121.4109189014961,25.44669179924161,0 120.9181009983501,25.69193657878095,0 115.5627340589746,22.54382003820151,0 110.6729515916803,21.03969521196937,0 111.7567688689293,19.55905104129841,0 109.9454666712284,18.06522732805229,0 109.1915819406424,14.96188932429955,0 109.7334619285438,11.65423922951179,0 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+</Document>
+</kml>

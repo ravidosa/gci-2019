@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Folder>
+    <Placemark>
+      <name>San Fransisco Museum of Modern Art</name>
+      <description>The San Francisco Museum of Modern Art is a modern art museum located in San Francisco, California. A nonprofit organization, SFMOMA holds an internationally recognized collection of modern and contemporary art, and was the first museum on the West Coast devoted solely to 20th-century art.</description>
+      <Point>
+        <coordinates>-122.4011, 37.7857, 0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Golden Gate National Recreational Area</name>
+      <description>The Golden Gate National Recreation Area is a U.S. National Recreation Area protecting 82,027 acres of ecologically and historically significant landscapes surrounding the San Francisco Bay Area. Much of the park is land formerly used by the United States Army.</description>
+      <Point>
+        <coordinates>-122.5295, 37.8480, 0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>The Fillmore</name>
+      <description>The Fillmore is a historic music venue in San Francisco, California. Built in 1912 and originally named the Majestic Hall, it became the Fillmore Auditorium in 1954. It is in Western Addition, on the edge of the Fillmore District and Upper Fillmore neighborhood.</description>
+      <Point>
+        <coordinates>-122.4331,37.7839,0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Mission San Francisco de Asis</name>
+      <description>Mission San Francisco de Asís, or Mission Dolores, is the oldest surviving structure in San Francisco and the sixth religious settlement established as part of the California chain of missions.</description>
+      <Point>
+        <coordinates>-122.4269, 37.7644, 0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Ghirardelli Square</name>
+      <description>Shops and restaurants fill this 3-level landmark former chocolate factory near Fisherman's Wharf.</description>
+      <Point>
+        <coordinates>-122.4226, 37.8059, 0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Lotta's Fountain</name>
+      <description>Lotta's fountain is a fountain at the intersection of Market Street, where Geary and Kearny Streets connect in downtown San Francisco, California. It was commissioned by actress Lotta Crabtree in 1875 as a gift to the city of San Francisco, and would serve as a significant meeting point in the aftermath of the 1906 San Francisco earthquake and fire. </description>
+      <Point>
+        <coordinates>-122.4034, 37.7879, 0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Golden Gate Bridge</name>
+      <description>The Golden Gate Bridge is a suspension bridge spanning the Golden Gate, the one-mile-wide strait connecting San Francisco Bay and the Pacific Ocean.</description>
+      <Point>
+        <coordinates>-122.4783, 37.8199, 0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>The Castro</name>
+      <description>The Castro District, in Eureka Valley, is synonymous with gay culture. Revelers often spill onto the sidewalks at numerous bars, like Twin Peaks Tavern, whose floor-to-ceiling windows were revolutionary when it opened in 1972. The lavish Castro Theatre and the GLBT Historic Museum are also found here, as are homey restaurants and adult shops. On Market Street, 19th-century F-line streetcars head to Fisherman’s Wharf.</description>
+      <Point>
+        <coordinates>-122.4350, 37.7609, 0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>The Embarcadero</name>
+      <description>The Embarcadero, along the city’s eastern shoreline, is home to several waterfront attractions. With its iconic clock tower, the 1898 Ferry Building is a major food lover's draw, featuring restaurants such as the acclaimed Slanted Door, plus gourmet shops and a popular farmers' market. A series of piers offers ferries to Alcatraz Island, science exhibits at the Exploratorium, restaurants and Bay Bridge views.</description>
+      <Point>
+        <coordinates>-122.3977, 37.7993, 0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Fiorella</name>
+      <description>Chic, cozy bistro dishing up elevated Italian pastas and wood-fired pizzas, plus wine and craft beer.</description>
+      <Point>
+        <coordinates>-122.4845, 37.7819, 0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Dragon Beaux</name>
+      <description>Chic Asian-fusion spot with booth seating and an upscale vibe for dim sum, hot pots, dumplings and more.</description>
+      <Point>
+        <coordinates>-122.4807, 37.7805, 0</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Nopalito</name>
+      <description>A vibrant San Francisco neighborhood Mexican kitchen, celebrating the traditional cookery of Mexico and utilizing local, organic and sustainable ingredients.</description>
+      <Point>
+        <coordinates>-122.4662, 37.7654, 0</coordinates>
+      </Point>
+    </Placemark>
+  </Folder>
+</kml>

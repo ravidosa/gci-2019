@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Hudson Bay.kml</name>
+	<LineStyle>
+		<color>13da9dfd</color>
+	</LineStyle><PolyStyle>
+		<color>13da9dfd</color>
+	</PolyStyle>
+	<Style id="s_ylw-pushpin_hl">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff6666fd</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>ff6666fd</color>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="m_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<LineStyle>
+			<color>ff6666fd</color>
+		</LineStyle>
+		<PolyStyle>
+			<color>ff6666fd</color>
+		</PolyStyle>
+	</Style>
+	<Placemark>
+		<name>Hudson Bay</name>
+		<description>Hudson Bay (Inuktitut: Kangiqsualuk ilua, French: baie d&apos;Hudson) (sometimes called Hudson&apos;s Bay, usually historically) is a large body of saltwater in northeastern Canada with a surface area of 1,230,000 km2 (470,000 sq mi). ... Hudson Bay&apos;s southern arm is cal</description>
+		<styleUrl>#m_ylw-pushpin</styleUrl>
+		<Polygon>
+			<tessellate>1</tessellate>
+			<gx:altitudeMode>clampToSeaFloor</gx:altitudeMode>
+			<outerBoundaryIs>
+				<LinearRing>
+					<coordinates>
+						-91.41756605216045,62.50216056444902,198643 -93.71969297870513,61.09544013197016,198643 -94.58774592046187,60.15751903977291,198643 -94.64538211544614,59.05703825351789,198643 -94.13423694382833,58.96012757236308,198643 -92.85096532291803,58.77715430344921,198643 -92.00382324843034,57.07722122695068,198643 -91.08289062897171,57.46519949680611,198643 -89.52824323346327,57.11939847361827,198643 -87.37472645608356,56.19662063567944,198643 -84.75292608453988,55.41802591765116,198643 -82.13168539288819,55.27376375292136,198643 -81.77605693584174,52.79712908418936,198643 -79.94532540321777,51.41329222050316,198643 -78.82854919511129,52.27500001180545,198643 -79.8455616224436,54.86416331794479,198643 -78.5594903474137,55.1349943002383,198643 -76.93209564693758,55.99687040719749,198643 -76.8645395581589,57.55416599563797,198643 -79.25157708495802,58.88569599963607,198643 -77.61858496159623,60.12177161765645,198643 -79.1769868545671,60.3552058824755,198643 -78.79384136545059,61.02809983764988,198643 -83.83637863949735,61.72427772057544,198643 -84.52964999844126,62.47820780520452,198643 -86.12607335516543,63.36814296400239,198643 -89.47600743382513,63.38150101724882,198643 -91.41756605216045,62.50216056444902,198643 
+					</coordinates>
+				</LinearRing>
+			</outerBoundaryIs>
+		</Polygon>
+	</Placemark>
+</Document>
+</kml>
