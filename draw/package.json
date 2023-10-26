@@ -13,7 +13,7 @@
   },
   "scripts": {
     "start": "node index"
-  },
-  "author": "Kripa Kini",
+    },
+  "author": "Ravi Kini",
   "license": "MIT"
 }
